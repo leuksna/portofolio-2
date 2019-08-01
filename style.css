@@ -174,7 +174,7 @@ a:hover {
 	z-index: 1;
 	position: relative;
 	left: 600px;
-	top: 600px;
+	top: 570px;
 	padding: 10px;
 	background: linear-gradient(130deg, 
      rgba(0, 38, 255, 0) 0%, 
@@ -207,7 +207,8 @@ footer{
      inset 0 0 1px rgba(0, 38, 255, 0.6);
 	text-align: right;
 	position: relative;
-	bottom: 0;
+	top: 800px;
+	left: 550px;
 	display: inline-block;
 	padding: 10px;
 
