@@ -71,7 +71,7 @@ nav li {
 #about{
 	width: 400px;
 	height: 400px;
-	color: #2B35FF;
+	color: #D0F400FF;
 	display: inline-block;
 	position: relative;
 	left: 150px;
@@ -91,15 +91,22 @@ nav li {
 	font-family: 'Crimson Pro', serif;
 	font-size: 20px;
 	text-transform: uppercase;
+	color: #2B35FF;
 }
 
 .about-me{
 	margin: 10px;
+	
 }
-
 .contact{
 	margin: 10px;
+
 }
+.contact h4{
+	margin: 10px;
+	color: #2B35FF;
+}
+
 
 .profil{
 	width: 300px;
@@ -138,7 +145,7 @@ a:hover {
   }
 
 .workshop{
-	color: #2B35FF;
+	color: #D0F400FF;
 	width: 500px;
 	height: 530px;
 	display: inline-block;
@@ -165,6 +172,7 @@ a:hover {
 	font-size: 20px;
 	text-transform: uppercase;
 	margin: 10px;
+	color: #2B35FF;
 }
 .first-try {
 	color: #2B35FF;
