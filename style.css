@@ -71,7 +71,7 @@ body {
 	grid-template-areas:
 	"about workshop workshop" 
 	"profil firsttry firsttry"
-	"contact . .";
+	"contact contact contact";
 
 }
 
