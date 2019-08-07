@@ -1,226 +1,255 @@
+/* color palette neutral/soft pink, sharp small shaddow
+simple layout, sharp font, add tech photo*/
+
+
 body {
-	 font-family: sans-serif;
-	 background-color: #A64D8758;
+	font-family: 'Nanum Gothic', sans-serif;
+	background-color:#E2DEF3FF;
+	color: white;
 }
 
-h1 h2 h3 h4 h5{
-	font-family: 'Crimson Pro', serif;
-}
-
-nav {
+.header-wrapper {
 	
-	font-family: 'Crimson Pro', serif;
-	text-transform: uppercase;
-	color: #D0F400FF;
-	background-color: #2B35FF;
-	list-style: : none;
-	text-align: right;
-	box-shadow: 2px 2px #DBDBDBFF, -2px -2px #DBDBDBFF;
-background: linear-gradient(90deg, 
-     rgba(0, 38, 255, 0) 0%, 
-     rgba(0, 38, 255, 0.2) 25%, 
-     rgba(0, 38, 255, 0.2) 75%, 
-     rgba(0, 38, 255, 0) 100%);
-   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-     inset 0 0 1px rgba(0, 38, 255, 0.6);
-}
+	max-height: 1200px;
+	margin:0 auto;
+	padding: 15px 20px;
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: "portrait intro intro";
+	color: white;
+}	
 
-
-nav li {
-	display: inline-block;
-	padding: 0 25px 0 25px;
-
-}
 .portrait img {
-	width: 200px;
-	height: 200px;
-	position: relative;
-	left: 100px;
-	top: 20px;
-	border-radius: 100px;
-	box-shadow: 1px 1px 2px 2px #2E32CA7E;
-}
+	grid-area: portrait;
+	width: 170px;
+	height: 170px;
+	border-radius: 85px;
+	filter:brightness(1.1) contrast(1.2);
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0,.25);
+	
+} 
 
-.intro{
-	width: 700px;
-	color: #D0F400FF;
-	background-color:#2B35FF; 
-	padding: 0 10px 0 10px;
+.intro{ 
+	grid-area: intro;
+	padding: 0 10px ;
 	border-width: 1px;
-	display: block;
 	font-size: 20px;
-	position: relative;
-	top: -125px;
-	left: 400px;
-	background: linear-gradient(90deg, 
-     rgba(0, 38, 255, 0) 0%, 
-     rgba(0, 38, 255, 0.2) 25%, 
-     rgba(0, 38, 255, 0.2) 75%, 
-     rgba(0, 38, 255, 0) 100%);
-   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-     inset 0 0 1px rgba(0, 38, 255, 0.6);
-}
+	color: #494949FF;
+	}
 
 .intro h1 {
-	font-family: 'Crimson Pro', serif;
+	font-family: 'Lora', serif;
 	font-size: 50px;
 	padding: 0;
 	margin: 0;
+	text-shadow: rgb(255, 127, 128) 1px 1px,
+    rgb(255, 127, 128) 2px 2px,
+    rgb(255, 127, 128) 3px 3px,
+    rgb(255, 127, 128) 4px 4px,
+    rgb(255, 127, 128) 5px 5px;
+
 }
 
-#about{
-	width: 400px;
-	height: 400px;
-	color: #D0F400FF;
-	display: inline-block;
-	position: relative;
-	left: 150px;
-	top: -200px;
-	border-radius: 2px;
-	background: linear-gradient(180deg, 
-     rgba(0, 38, 255, 0) 0%, 
-     rgba(0, 38, 255, 0.2) 25%, 
-     rgba(0, 38, 255, 0.2) 75%, 
-     rgba(0, 38, 255, 0) 100%);
-   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-     inset 0 0 1px rgba(0, 38, 255, 0.6);
-     z-index: 4;
-}
+/*main content styling*/
 
-#about h4 {
-	font-family: 'Crimson Pro', serif;
-	font-size: 20px;
-	text-transform: uppercase;
-	color: #2B35FF;
-}
-
-.about-me{
-	margin: 10px;
+.main-wrapper{
+	
+	max-width: 1200px;
+	margin: auto;
+	
 	
 }
+
+.wrapper {
+	
+	max-width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 10px;
+	grid-template-areas:
+	"about workshop workshop" 
+	"profil firsttry firsttry"
+	"contact contact contact";
+
+}
+
+
+/*about me section*/
+.about-me{
+	grid-area: about;
+	padding: 20px;	
+	box-shadow: 0 0 4px rgba(0,0,0,.25);
+	border-radius: 2px;
+	background-color: #FF7F80FF;
+}
+
+.about-me h4 {
+	font-family: 'Lora', serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #494949FF;
+}
+
+/* contact section*/
 .contact{
-	margin: 10px;
+	grid-area: contact;
+	padding: 20px;
+	box-shadow: 0 0 4px rgba(0,0,0,.25);
+	border-radius: 2px;
+	background-color: #FF7F80FF;
+	
+	
 
 }
 .contact h4{
-	margin: 10px;
-	color: #2B35FF;
+	font-family: 'Lora', serif;	
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #494949FF;
 }
 
-
-.profil{
-	width: 300px;
-	height: 200px;
-	color: #2B35FF;
-	display: inline-block;
-	position: relative;
-	bottom: 120px;
-	left: 400px;
+/*profil section*/
+.profil-wrapper{ 
+	grid-area:profil;
+	box-shadow: 0 0 4px rgba(0,0,0,.25);
+	padding: 20px;
 	border-radius: 2px;
-	background: linear-gradient(130deg, 
-     rgba(0, 38, 255, 0) 0%, 
-     rgba(0, 38, 255, 0.2) 25%, 
-     rgba(0, 38, 255, 0.2) 75%, 
-     rgba(0, 38, 255, 0) 100%);
-   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-     inset 0 0 1px rgba(0, 38, 255, 0.6);
-     z-index: 3;
+	background-color: #FF7F80FF;
+	color: #494949FF;
+	
+		
 }
 
-.profil h4 {
-	font-family: 'Crimson Pro', serif;
+.profil-wrapper h4 {
+	font-family: 'Lora', serif;
 	font-size: 20px;
 	text-transform: uppercase;
 	margin: 10px;
 }
-
-.profil a {
+.profil-wrapper ul li{
+	list-style-type: none;
+}
+.profil-wrapper a {
+	text-transform: uppercase;
 	text-decoration: none;
-	color:  #D0F400FF;
+	letter-spacing: .1em;
+	font-weight: bold;
+	padding: 10px;
+	color: white;	
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #2B35FF;
+  color: hotpink;
+  cursor: pointer;
   }
 
+/*project section*/
+
 .workshop{
-	color: #D0F400FF;
-	width: 500px;
-	height: 530px;
-	display: inline-block;
-	z-index: 2;
-	position: relative;
-	right: 500px;
-	top: 570px;
-	padding: 10px;
-	background: linear-gradient(130deg, 
-     rgba(0, 38, 255, 0) 0%, 
-     rgba(0, 38, 255, 0.2) 25%, 
-     rgba(0, 38, 255, 0.2) 75%, 
-     rgba(0, 38, 255, 0) 100%);
-   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-     inset 0 0 1px rgba(0, 38, 255, 0.6);
-}
+	grid-area: workshop;
+	padding: 20px;
+	box-shadow: 0 0 4px rgba(0,0,0,.25);
+	border-radius: 2px;
+	background-color: #FF7F80FF;
+	color: white;
+	}
+
 .workshop img {
 	width: 500px;
-	height: 400px;
+	height: 300px;
 }
 
 .workshop h4 {
-	font-family: 'Crimson Pro', serif;
+	font-family: 'Lora', serif;
 	font-size: 20px;
 	text-transform: uppercase;
 	margin: 10px;
-	color: #2B35FF;
-}
-.first-try {
-	color: #2B35FF;
-	width: 500px;
-	height: 450px;
-	display: inline-block;
-	z-index: 1;
-	position: relative;
-	left: 600px;
-	top: 570px;
-	padding: 10px;
-	background: linear-gradient(130deg, 
-     rgba(0, 38, 255, 0) 0%, 
-     rgba(0, 38, 255, 0.2) 25%, 
-     rgba(0, 38, 255, 0.2) 75%, 
-     rgba(0, 38, 255, 0) 100%);
-   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-     inset 0 0 1px rgba(0, 38, 255, 0.6);
+	color: #494949FF;
 }
 
+.first-try {
+	grid-area: firsttry;
+	padding: 20px;
+	box-shadow: 0 0 4px rgba(0,0,0,.25);
+	border-radius: 2px;
+	background-color: #FF7F80FF;
+	color: #494949FF;
+
+}
+	
 .first-try img {
 	width: 500px;
-	height: 400px;
+	height: 300px;
 	}
+
 .first-try h4{
-	font-family: 'Crimson Pro', serif;
+	font-family: 'Lora', serif;
 	font-size: 20px;
 	text-transform: uppercase;
 	margin: 10px;
-	}
-
+}
+/*footer*/
 footer{
-	color: #D0F400FF;
-	background: linear-gradient(130deg, 
-     rgba(0, 38, 255, 0) 0%, 
-     rgba(0, 38, 255, 0.2) 25%, 
-     rgba(0, 38, 255, 0.2) 75%, 
-     rgba(0, 38, 255, 0) 100%);
-   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-     inset 0 0 1px rgba(0, 38, 255, 0.6);
-	text-align: right;
-	position: relative;
-	top: 800px;
-	left: 550px;
-	display: inline-block;
-	padding: 10px;
-
+	display: grid;
+	color: #eee;
+	background-color:#353535FF;
+   	margin:auto;
+	grid-template-columns:minmax(20px,300px); 
+	justify-content: center;
+	grid-template-rows: 1fr 1fr;
 
 }
 
+
+/*tablet media query*/
+@media screen and (max-width:950px){
+	.wrapper{
+		grid-template-areas: 
+		"about profil contact"
+		"workshop workshop workshop"
+		"firsttry firsttry firsttry";
+	}
+	.intro{
+		grid-column: 1/5;
+		text-align: center;
+
+	}
+	.portrait{
+		grid-column: 1/5;
+		text-align: center;
+	}
+	.header-wrapper{
+		margin-top: 0;
+		grid-gap: 5px;
+	}
+}
+
+/* mobile media query*/
+@media screen and (max-width:690px){
+	.portrait{
+		grid-column: 1/5;
+		text-align: center;
+		
+	}
+	.intro{
+		grid-column: 1/5;
+		text-align: center; 
+	}
+	.header-wrapper{
+		margin-top: 0;
+		padding: 0;
+	}
+	.wrapper{
+		grid-template-areas: 
+		"about about about " 
+		"profil profil profil" 
+		"workshop workshop workshop" 
+		"firsttry firsttry firsttry"
+		"contact contact contact" ;
+	}
+	
+	
+}
 
